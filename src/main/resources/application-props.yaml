@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  servlet:
+    display-name: BotApp
+    context-path: "/botapp"
+
+resources: src/main/resources
+certs: certs
+bot-config: ${resources}/bot-config.json
+
+logging:
+  file: ${resources}/logs/bot-app.log
+  level:
+    ROOT: INFO
+    com.symphony.bdk.bot.sdk: DEBUG
+    com.symphony.bdk.bot.template: DEBUG
+
