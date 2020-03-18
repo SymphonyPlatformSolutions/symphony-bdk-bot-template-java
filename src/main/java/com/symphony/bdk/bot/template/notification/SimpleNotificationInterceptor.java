@@ -16,12 +16,12 @@ import com.symphony.bdk.bot.sdk.symphony.model.SymphonyMessage;
  * sample code to see how to generate incoming requests.
  *
  */
-public class MyNotificationInterceptor extends NotificationInterceptor {
-  private static final Logger LOGGER = LoggerFactory.getLogger(MyNotificationInterceptor.class);
+public class SimpleNotificationInterceptor extends NotificationInterceptor {
+  private static final Logger LOGGER = LoggerFactory.getLogger(SimpleNotificationInterceptor.class);
 
   private JsonMapper jsonMapper;
 
-  public MyNotificationInterceptor(JsonMapper jsonMapper) {
+  public SimpleNotificationInterceptor(JsonMapper jsonMapper) {
     this.jsonMapper = jsonMapper;
   }
 

@@ -20,6 +20,7 @@ public class HelpCommandHandler extends CommandHandler {
       "/create notification - generates details on how to receive notification in this room",
       "/login - returns the HTTP authorization header required to talk to external system",
       "/quote BRL - returns quote for the specified currency (e.g. BRL)",
+      "/attachment file - simply returns the file attached to the message",
       "/register quote - displays the currency quote registration form",
       "/template alert - renders predefined templates (e.g. alert, notification) based on your inputs",
       "/broadcast message - spread a message to all bot active rooms"

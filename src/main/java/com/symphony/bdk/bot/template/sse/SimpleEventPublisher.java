@@ -22,8 +22,8 @@ import lombok.NoArgsConstructor;
 /**
  * Sample code. Simple SsePublisher which sends events every second to client application.
  */
-public class MyEventPublisher extends SsePublisher<MyEventPublisher.SimpleEvent> {
-  private static final Logger LOGGER = LoggerFactory.getLogger(MyEventPublisher.class);
+public class SimpleEventPublisher extends SsePublisher<SimpleEventPublisher.SimpleEvent> {
+  private static final Logger LOGGER = LoggerFactory.getLogger(SimpleEventPublisher.class);
   private static final long WAIT_INTERVAL = 1000L;
 
   private boolean running = false;
