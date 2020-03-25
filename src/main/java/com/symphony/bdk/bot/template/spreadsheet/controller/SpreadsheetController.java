@@ -32,7 +32,7 @@ public class SpreadsheetController {
 
   /**
    * Gets all spreadsheets
-   *
+   * @param userId the user's id
    * @return all spreadsheets
    */
   @GetMapping
@@ -47,7 +47,7 @@ public class SpreadsheetController {
 
   /**
    * Gets a specific spreadsheet
-   *
+   * @param userId   the user's id
    * @param streamId the id of the stream the spreadsheet belongs to
    * @return the spreadsheet
    */
@@ -64,6 +64,7 @@ public class SpreadsheetController {
   /**
    * Creates a new spreadsheet to a room. If the room already have a spreadsheet it is overwritten
    *
+   * @param userId the user's id
    * @param roomSpreadsheet the new spreadsheet
    * @return the response success
    */
@@ -77,6 +78,7 @@ public class SpreadsheetController {
   /**
    * Updates a spreadsheet
    *
+   * @param userId   the user's id
    * @param cells    the cells to be updated
    * @param streamId the id of the room the spreadsheet belongs to
    * @return the response success
@@ -95,6 +97,7 @@ public class SpreadsheetController {
   /**
    * Gets the rooms that can have a spreadsheet
    *
+   * @param userId the user's id
    * @return the rooms with a flag signing if they have a spreadsheet
    */
   @GetMapping("rooms")

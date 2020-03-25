@@ -11,7 +11,7 @@ import com.symphony.bdk.bot.sdk.lib.restclient.RestClient;
  * Sample code. Demonstrates how to aggregate new health indicators to the
  * overall system health check endpoint. This sample simply checks Internet
  * connectivity. To check its results go to:
- * http://<hostname>:<port>/<context_path>/monitor/health
+ * http://hostname:port/context_path/monitor/health
  *
  */
 public class InternetConnectivityHealthIndicator implements HealthIndicator {

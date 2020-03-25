@@ -34,11 +34,9 @@ public class SpreadsheetPresenceService {
   /**
    * Add a new {@link SpreadsheetPresenceSender} for the presence sending process
    *
-   * @param eventId
-   * @param presenceEvent
-   * @param publisher
-   * @param streamId
-   * @param userId
+   * @param publisher publisher
+   * @param streamId  stream id
+   * @param user      user
    */
   public void beginSending(SsePublisher<SpreadsheetEvent> publisher, String streamId, SymphonyUser user) {
     SpreadsheetPresenceSender presenceSender = SpreadsheetPresenceSender.builder()
@@ -53,8 +51,8 @@ public class SpreadsheetPresenceService {
   /**
    * Removes the {@link SpreadsheetPresenceSender} from the presence sending process
    *
-   * @param streamId
-   * @param userId
+   * @param streamId stream id
+   * @param userId   user id
    */
   public void finishSending(String streamId, Long userId) {
     Iterator<SpreadsheetPresenceSender> iterator = presenceSenders.iterator();

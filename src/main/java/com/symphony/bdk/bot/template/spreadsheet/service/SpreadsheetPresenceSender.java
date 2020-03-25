@@ -23,6 +23,8 @@ public class SpreadsheetPresenceSender {
 
   /**
    * Sends a presence event
+   *
+   * @param eventId the event id to send to
    */
   public void send(AtomicLong eventId) {
     publisher.publishEvent(buildPresenceEvent(streamId, user, eventId.getAndIncrement()));

@@ -28,9 +28,9 @@ public class UsersController {
   /**
    * Gets an user by username or userId. "local" needs to be filled only when getting by userId
    *
-   * @param username
-   * @param userId
-   * @param local
+   * @param username the username to query
+   * @param userId   the user id to query
+   * @param local    query this pod only or search externally
    * @return the user
    */
   @GetMapping
