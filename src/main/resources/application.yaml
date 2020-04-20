@@ -15,3 +15,6 @@ logging:
     com.symphony.bdk.bot.sdk: DEBUG
     com.symphony.bdk.bot.template: DEBUG
 
+samples:
+  quote-command:
+    quote-url: https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=%s&apikey=C7G0Q2QOJ80OECGM

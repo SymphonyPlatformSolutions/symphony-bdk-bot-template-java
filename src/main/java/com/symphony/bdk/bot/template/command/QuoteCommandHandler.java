@@ -4,6 +4,8 @@ import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.regex.Pattern;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import com.symphony.bdk.bot.template.command.model.InternalQuote;
 import com.symphony.bdk.bot.template.command.model.QuoteResponse;
 import com.symphony.bdk.bot.sdk.command.CommandHandler;
@@ -17,10 +19,9 @@ import com.symphony.bdk.bot.sdk.symphony.model.SymphonyMessage;
  * quotes.
  */
 public class QuoteCommandHandler extends CommandHandler {
-
-  private static final String QUOTE_URL =
-      "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD"
-          + "&to_currency=%s&apikey=C7G0Q2QOJ80OECGM";
+  	
+  @Value("${samples.quote-command.quote-url}")
+  private String QUOTE_URL;
   private static final String QUOTE_COMMAND = "/quote";
 
   private RestClient restClient;
