@@ -19,9 +19,10 @@ import com.symphony.bdk.bot.sdk.symphony.model.SymphonyMessage;
  * quotes.
  */
 public class QuoteCommandHandler extends CommandHandler {
-  	
-  @Value("${samples.quote-command.quote-url}")
-  private String QUOTE_URL;
+
+  @Value("${samples.quote-command.api-key}")
+  private String QUOTE_API_KEY;
+  private static final String QUOTE_API_URL = "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=%s&apikey=%s";
   private static final String QUOTE_COMMAND = "/quote";
 
   private RestClient restClient;
@@ -69,7 +70,8 @@ public class QuoteCommandHandler extends CommandHandler {
 
   private RestResponse<QuoteResponse> requestQuote(String currency) {
     return restClient.getRequest(
-        String.format(QUOTE_URL, currency), QuoteResponse.class);
+        String.format(QUOTE_API_URL, currency, QUOTE_API_KEY),
+        QuoteResponse.class
+    );
   }
-
 }

@@ -17,4 +17,4 @@ logging:
 
 samples:
   quote-command:
-    quote-url: https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=%s&apikey=C7G0Q2QOJ80OECGM
+    api-key: your-key-here
