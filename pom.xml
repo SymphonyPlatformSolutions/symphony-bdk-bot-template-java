@@ -15,7 +15,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <symphony.bdk.bot.sdk.version>1.0.3</symphony.bdk.bot.sdk.version>
+        <symphony.bdk.bot.sdk.version>1.0.4</symphony.bdk.bot.sdk.version>
         <jacoco.version>0.8.5</jacoco.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
